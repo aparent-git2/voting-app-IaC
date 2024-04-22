@@ -5,6 +5,8 @@ on:
   pull_request:
     types: [ opened, reopened, synchronize ]
     branches: [ master, main ]
+    paths:
+    - 'secrets/**'
 
 jobs:
   s1-cns-cli:
