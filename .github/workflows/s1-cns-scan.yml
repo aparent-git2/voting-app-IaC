@@ -1,9 +1,9 @@
 name: SentinelOne CNS Scan
 
-on:
-  # Triggers the workflow when pull_request created on master/main branch
+on: 
   pull_request:
-    types: [ opened, reopened, synchronize ]
+    paths: 
+    - 'AWS-examples\**'
 
 jobs:
   s1-cns-cli:
