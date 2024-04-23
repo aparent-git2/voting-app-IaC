@@ -1,7 +1,7 @@
 #some Env variables
 env:
     IMAGE_NAME: "app"
-    DOCKERFILE_CONTEXT: "vote/"
+    DOCKERFILE_CONTEXT: "result/"
   
 name: S1-tests
 
@@ -19,7 +19,7 @@ jobs:
       uses: actions/checkout@v2
       
     - name: Set Tags #New env varaibles to add tag based on date & hour for the new image
-      run: echo "IMAGE_TAG=vote-$(date +%Y%m%d%H%M)" >> $GITHUB_ENV 
+      run: echo "IMAGE_TAG=result-$(date +%Y%m%d%H%M)" >> $GITHUB_ENV 
     
     - name: Set up Docker Buildx
       uses: docker/setup-buildx-action@v2
