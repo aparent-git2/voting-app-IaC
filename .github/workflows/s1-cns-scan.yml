@@ -38,5 +38,11 @@ jobs:
         env:
           DEST: ${{ github.event.pull_request.base.sha }}
           SRC: ${{ github.event.pull_request.head.ref }}
+          
+      - name: Run VULN
+        run:  s1-cns-cli scan vuln -d $PWD
+        env:
+          DEST: ${{ github.event.pull_request.base.sha }}
+          SRC: ${{ github.event.pull_request.head.ref }}
 
     
