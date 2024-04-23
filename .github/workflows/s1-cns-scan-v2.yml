@@ -8,7 +8,7 @@ name: S1-tests
 on: 
   pull_request:
     paths:
-    - 'vote/**Dockerfile' #conditions to scan only when modifying the DOCKERFILE related to image
+    - 'result/**Dockerfile' #conditions to scan only when modifying the DOCKERFILE related to image
 
 jobs:
   tests:
